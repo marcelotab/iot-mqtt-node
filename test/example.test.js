@@ -1,6 +1,6 @@
 // Required app modules.
 // const jest = require("jest");
-
+// https://livebook.manning.com/book/unit-testing/chapter-3/
 describe('Testing the operation services', () => {
 
     describe('Create transaction operation details tests', () => {
@@ -8,6 +8,9 @@ describe('Testing the operation services', () => {
             // Arrange
 
             // Act
+
+            // Assert
+
 
         });
     });
