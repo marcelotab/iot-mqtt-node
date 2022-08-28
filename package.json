@@ -1,0 +1,22 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "Project to learn about TDDD, unit testing and librares such as Jest, Mocha, Chai, Jazmine, Supertest.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "testing",
+    "jest",
+    "node",
+    "javascript",
+    "backend"
+  ],
+  "author": "beto",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.1"
+  }
+}
