@@ -7,7 +7,6 @@
     "start": "node src/app.js",
     "dev": "nodemon --inspect ./src/app.js",
     "test": "jest --verbose",
-    "prepare": "husky install"
   },
   "keywords": [
     "testing",
