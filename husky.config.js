@@ -1,6 +1,6 @@
 module.exports = {
     hooks: {
-        'pre-commit': 'npm run test',
+        'pre-commit': 'ng run test',
         'pre-push': 'ng test',
         // 'pre-commit': 'ng test',
     },
