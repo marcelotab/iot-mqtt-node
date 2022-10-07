@@ -5,7 +5,9 @@
     "es2021": true,
     "jest": true
   },
-  "extends": "airbnb-base",
+  "plugins": ["jest"],
+  "extends": ["eslint:recommended", "plugin:jest/recommended", "airbnb-base"],
+
   "overrides": [
   ],
   "parserOptions": {
