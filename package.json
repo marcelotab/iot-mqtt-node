@@ -9,12 +9,6 @@
     "test": "jest --verbose",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
-  },
-
   "keywords": [
     "testing",
     "jest",
