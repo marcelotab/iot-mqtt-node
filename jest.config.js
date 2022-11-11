@@ -131,19 +131,19 @@ module.exports = {
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 
-  // The paths to modules that run some code to configure or set up the testing environment before each test
+  // The paths to modules that run some code to configure or set up the iot-mqtt-node environment before each test
   // setupFiles: [],
 
-  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  // A list of paths to modules that run some code to configure or set up the iot-mqtt-node framework before each test
   // setupFilesAfterEnv: [],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
 
-  // A list of paths to snapshot serializer modules Jest should use for snapshot testing
+  // A list of paths to snapshot serializer modules Jest should use for snapshot iot-mqtt-node
   // snapshotSerializers: [],
 
-  // The test environment that will be used for testing
+  // The test environment that will be used for iot-mqtt-node
   // testEnvironment: "jest-environment-node",
 
   // Options that will be passed to the testEnvironment
