@@ -39,13 +39,13 @@
 
 
 const mqtt = require('mqtt');
-const dotenv = require('dotenv')
 const brokerURI = process.env.MQTT_BROKER_URI;
 
 const mqttOptions = {
-     username: process.env.MQTT_USER;
-     password: process.env.MQTT_PASSWORD;
-}
+    port: process.env.MQTT_PORT,
+     username: process.env.MQTT_USER,
+     password: process.env.MQTT_PASSWORD,
+};
 
 const baseTopic = '/' + username;
 const topic     = baseTopic + '/001';
@@ -57,7 +57,7 @@ const message   = '0';
 const client  = mqtt.connect(brokerURI, mqttOptions);
 
 // attach event listener for 'connect' event
-client.on('connect',  () =>{
+client.on('connect',  () => {
 
     // client has connected to the broker
     console.log('client connected to the broker successful');

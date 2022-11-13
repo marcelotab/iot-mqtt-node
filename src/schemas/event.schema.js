@@ -1,4 +1,4 @@
-const EVENT_TYPES = require("../constants/events");
+const { EVENT_TYPES }= require("../constants/events");
 const {Schema, model} = require("mongoose");
 
 const eventSchema = new Schema({

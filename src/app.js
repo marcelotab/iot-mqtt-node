@@ -1,25 +1,31 @@
+// Express:
 const express = require('express')
 const app = express();
 const router = require('./routes');
+
+// Swagger:
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../docs/swagger.json');
+
 const {connection} = require("./database/connection.db");
-const {error} = require("winston");
 const bodyParser = require("express");
-const API_VERSION = 'v1';
-const PORT = 8080;
-require('dotenv').config({
-    path: '/home/beto/Projects/learning/iot-mqtt-node'
-});
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded())
-// parse application/json
-app.use(bodyParser.json())
-app.use(`/api/${API_VERSION}`, router);
+const {startMqttClient} = require("./mqtt");
+const BASE_PATH = '/api/v1';
+const PORT = process.env.NODE_PORT || 3000;
+require('dotenv').config();
 
+// Middlewares
+app.use(bodyParser.json());
+app.use(`${BASE_PATH}/docs`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use(`${BASE_PATH}`, router);
 
+// Start api rest:
 app.listen(PORT, async () => {
     console.log(`app listening on port ${PORT}`);
     await connection();
 });
 
+// Start mqtt client:
+startMqttClient();
 
 

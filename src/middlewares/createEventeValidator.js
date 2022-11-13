@@ -5,5 +5,7 @@ const createNewEventSchema = Joi.object({
     storageId: Joi.string().required(),
 });
 
-createNewEventSchema.validate({ username: 'abc', birth_year: 1994 });
+const validateSchema = () => {
+    createNewEventSchema.validate({ username: 'abc', birth_year: 1994 });
+}
 

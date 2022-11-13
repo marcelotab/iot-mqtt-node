@@ -2,7 +2,7 @@ const { createEventService } = require('../services/events.service');
 const createEvent = async (req, res) => {
     try {
         const { type, storageId } = req.body;
-        const result = await createEventService({ eventType:type, storageId});
+        await createEventService({ eventType:type, storageId});
         res.send({
             status: 201,
             message: `Event ${type} was created successful`
@@ -12,6 +12,22 @@ const createEvent = async (req, res) => {
     }
 }
 
+const generateMetrics = async (req, res) => {
+    try {
+        const { type, storageId } = req.body;
+        await createEventService({ eventType:type, storageId});
+        res.send({
+            message: 'Metrics generated successful',
+            status: 200,
+            metrics: {
+            }
+        });
+    }catch (error) {
+        console.info(`Error trying to generate metrics ${JSON.stringify(error)}`);
+    }
+}
+
 module.exports = {
     createEvent,
+    generateMetrics,
 };

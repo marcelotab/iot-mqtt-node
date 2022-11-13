@@ -1,15 +1,8 @@
 const express = require('express');
-const {createEvent} = require("../controllers/events.controller");
-console.log(createEvent.toString())
+const {createEvent, generateMetrics} = require("../controllers/events.controller");
 const router = express.Router();
 
-// Events routes
-router.get('/:id', (req,res) => {
-    res.send({
-        statusCode: 200,
-        message: 'It is alive',
-    });
-});
+router.get('/metrics', generateMetrics);
 router.post('/', createEvent);
 
 // user routes
