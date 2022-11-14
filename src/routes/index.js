@@ -4,7 +4,6 @@ const health = require('./healths');
 const events = require('./events');
 
 // router.use('/health', health);
-// router.use('/users', users);
 router.use('/events', events);
 
 module.exports = router

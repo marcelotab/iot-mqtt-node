@@ -8,7 +8,6 @@ const {
     LoggerMiddleware
 } = require('simple-command-bus');
 const {createEventService} = require("../../services/events.service");
-const EVENT_TYPES = require("../../constants/events");
 
 // CreateAccount Command
 class CreateEventCommand extends Command {

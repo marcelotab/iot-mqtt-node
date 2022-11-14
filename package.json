@@ -10,11 +10,12 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "testing",
-    "jest",
+    "mqtt",
+    "mongodb",
     "node",
     "javascript",
-    "backend"
+    "backend",
+    "api rest"
   ],
   "author": "beto",
   "license": "ISC",
@@ -42,6 +43,7 @@
     "mqtt": "^4.3.7",
     "simple-command-bus": "^1.0.7",
     "swagger-ui-express": "^4.6.0",
+    "ts-jest": "^29.0.3",
     "winston": "^3.8.2"
   }
 }

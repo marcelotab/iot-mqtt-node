@@ -6,11 +6,18 @@
 
 Para levantar el proyecto, correr los siguientes comandos:
 
+1- Instalar dependencias:
 ```bash
-npm i && npm run dev
+npm i
+```
+2- Setear variables de entorno:
+```bash
 cp .env.template .env
 ```
-
+2- Levantar el proyecto:
+```bash
+npm run dev
+```
 ### 👩 💻 Developing
 
 
@@ -21,11 +28,4 @@ cp .env.template .env
 
 This template uses [`prettier`](https://prettier.io/) to format the project. To invoke, run `npm run format`.
 
-### 👀 Previewing and Publishing
-
-
-## 🤢 Issues
-
-
-## ⚠️ Caveats
 
