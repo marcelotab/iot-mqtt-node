@@ -34,4 +34,5 @@ npm run format
 
 ### ️ Arquitectura del proyecto
 
-![](/home/beto/Projects/learning/iot-mqtt-node/docs/arquitecture.png)
+![](./docs/arquitecture.png)
+
