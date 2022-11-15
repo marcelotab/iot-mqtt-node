@@ -12,7 +12,7 @@ const eventTypes = {
     STORAGE_WAS_EMPTIED: 'STORAGE_WAS_EMPTIED',
     STORAGE_WAS_FILLED: 'STORAGE_WAS_FILLED',
     NEW_CIGARETTE_BUTT_STORED: 'NEW_CIGARETTE_BUTT_STORED',
-}
+};
 module.exports = {
     EVENT_TYPES,
     eventTypes

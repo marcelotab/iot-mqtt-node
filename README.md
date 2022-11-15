@@ -1,31 +1,37 @@
 # ʕ •́؈•̀) `iot-mqtt-node`
 
-## Note: You must use [wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update) 1.17 or newer to use this template.
-
 ## 🔋 Getting Started
 
-Para levantar el proyecto, correr los siguientes comandos:
+Para levantar el proyecto, debemos correr los siguientes comandos:
 
 1- Instalar dependencias:
 ```bash
 npm i
 ```
-2- Setear variables de entorno:
+2- Setear variables de entorno por los valores correspondientes:
 ```bash
 cp .env.template .env
 ```
-2- Levantar el proyecto:
+2- Para correr la aplicacion ejecutar:
 ```bash
 npm run dev
 ```
-### 👩 💻 Developing
-
 
 ### 🧪 Testing
-
+Los test se implementaron usando la libreria de `jest` y `supertest`
+Antes de hacer un commit, se van a correr los test para asegurarnos de que todos corran y no se vean afectados por los nuevos cambios
+Para correr los test unitarios, ejecutar el siguiente comando:
+```bash
+npm test
+```
 
 ### ✏️ Formatting
 
-This template uses [`prettier`](https://prettier.io/) to format the project. To invoke, run `npm run format`.
+Este proyecto utiliza [`prettier`](https://prettier.io/) para formatear el codigo. Para poder formatearlo debemos correr el siguiente comando 
+```bash
+npm run format
+```
 
+### ️ Arquitectura del proyecto
 
+![](/home/beto/Downloads/Iot project.drawio.png)

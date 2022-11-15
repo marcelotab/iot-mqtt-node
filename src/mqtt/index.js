@@ -27,7 +27,7 @@ const startMqttClient = () => {
 
     client.on("message", async(topic, payload) => {
         console.log(`New message received in topic ${topic}`);
-        console.log(payload.toString(), payload.toJSON(), payload)
+        console.log(payload.toString(), payload.toJSON(), payload);
         console.log(`Payload ${payload.toString()}`);
         await createEventService({eventType:eventTypes.NEW_CIGARETTE_BUTT_STORED, storageId:'1'})
     })
