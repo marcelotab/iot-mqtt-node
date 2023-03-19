@@ -3,6 +3,7 @@ const mqtt = require('mqtt');
 const {SUBSCRIBE_TOPICS} = require("../constants/mqttTopics");
 const {createEventService} = require("../services/events.service");
 const {eventTypes} = require("../constants/events");
+const {translateTopicToEvent} = require("../helpers/translateTopicToEvent");
 
 // Initialize configs
 const startMqttClient = () => {
@@ -29,7 +30,10 @@ const startMqttClient = () => {
         console.log(`New message received in topic ${topic}`);
         console.log(payload.toString(), payload.toJSON(), payload);
         console.log(`Payload ${payload.toString()}`);
-        await createEventService({eventType:eventTypes.NEW_CIGARETTE_BUTT_STORED, storageId:'1'})
+        const eventType = translateTopicToEvent(topic);
+
+        // await createEventService({eventType:eventTypes.NEW_CIGARETTE_BUTT_STORED, storageId:'1'})
+        await createEventService({eventType, storageId:'1'})
     })
 }
 
